@@ -1,0 +1,101 @@
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 80px;
+  height: 42px;
+  float: right;
+  border-radius: 100px;
+  position: relative;
+  background-color: #f2e9e4;
+  background-image: url(../../public/icon_sun.svg);
+  background-repeat: no-repeat;
+  background-position: 75% 50%;
+  background-size: 14px;
+}
+
+label::after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  width: 28px;
+  height: 28px;
+  background-color: #262632;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked+label {
+  background-image: url(../../public/icon_moon.svg);
+  background-color: #262632;
+  background-repeat: no-repeat;
+  background-position: 25% 50%;
+  background-size: 13px;
+}
+
+input:checked+label::after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+  background-color: #f2e9e4;
+}
+
+label:active:after {
+  width: 70px;
+}
+
+#header {
+  width: 95%;
+  background-color: var(--background-color-body);
+  font-weight: 700;
+  height: 70px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  margin: 20px 0px;
+  box-shadow: 15px 15px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-icon {
+  margin-right: 20px;
+  align-self: center;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--color-font)
+}
+
+#navbar {
+  margin: 0px 40px;
+  color: var(--color-font)
+}
+
+#icons-header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 40px;
+  width: 150px;
+}
+
+#icons-header p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 700;
+  background-color: var(--icon-profile-background);
+  color: var(--icon-profile-font);
+  height: 42px;
+  width: 42px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
