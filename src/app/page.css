@@ -1,0 +1,24 @@
+#home {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+#left-content {
+  margin: 15vh 10vh;
+  font-size: 20px;
+  padding: 0;
+}
+
+#content {
+  margin: 5vh 0vh;
+}
+
+#user-img {
+  width: 400px;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  border-radius: 50%;
+}
