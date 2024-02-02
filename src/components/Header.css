@@ -13,7 +13,7 @@ label {
   border-radius: 100px;
   position: relative;
   background-color: #f2e9e4;
-  background-image: url(../../public/icon_sun.svg);
+  background-image: url(/images/icon_sun.svg);
   background-repeat: no-repeat;
   background-position: 75% 50%;
   background-size: 14px;
@@ -32,7 +32,7 @@ label::after {
 }
 
 input:checked+label {
-  background-image: url(../../public/icon_moon.svg);
+  background-image: url(/images/icon_moon.svg);
   background-color: #262632;
   background-repeat: no-repeat;
   background-position: 25% 50%;
