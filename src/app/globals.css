@@ -9,6 +9,7 @@
   --color-font: #f2e9e4;
   --background-color-bottom: #171825;
   --icon-profile-background: #f2e9e4;
+  --background-menu: var(--background-color-bottom);
   --icon-profile-font: var(--background-color-body);
 }
 
@@ -16,6 +17,7 @@
   --background-color-body: #f2e9e4;
   --color-font: #262632;
   --background-color-bottom: #b4b4b4;
+  --background-menu: var(--background-color-body);
   --icon-profile-background: var(--color-font);
   --icon-profile-font: var(--background-color-body);
 }
@@ -23,17 +25,24 @@
 .App {
   display: flex;
   flex-direction: column;
+  /* flex-wrap: wrap; */
   align-items: center;
   background-color: var(--background-color-bottom);
   min-height: 100vh;
+  max-height: auto;
+  max-width: 100%;
+  width: 100%;
 }
 
 .body-page {
   background-color: var(--background-color-body);
   color: var(--color-font);
-  height: 80vh;
+  min-height: 80vh;
+  max-height: auto;
   width: 95%;
   border-radius: 20px;
-  margin-top: 30px;
+  margin: 30px 0px;
   box-shadow: 15px 15px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-wrap: wrap;
 }
