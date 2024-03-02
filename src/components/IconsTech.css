@@ -28,3 +28,14 @@
   margin: 10px;
   text-align: center;
 }
+
+@media screen and (max-width: 880px) {
+  .tech-body {
+    height: 140px;
+    width: 120px;
+  }
+
+  .img-tech {
+    width: 40px;
+  }
+}

@@ -3,13 +3,30 @@ import "./Header.css";
 import Link from 'next/link'
 
 function Header() {
+  document.body.style.overflow = "auto";
+
   const switchTheme = () => {
     const html = document.querySelector("html");
     html.classList.toggle("light-mode");
   };
 
+  const switchActiveMenu = () => {
+    const navBar = document.querySelector("#navbar");
+    navBar.classList.toggle("active");
+  };
+
+  const lockScroll = () => {
+    const navBar = document.querySelector("#navbar");
+    if (navBar.classList.contains("active")) {
+      document.body.style.overflow = "hidden";
+      return
+    }
+    document.body.style.overflow = "auto";
+  };
+
   return (
     <header id="header">
+      <button id="nav-button" onClick={() => { switchActiveMenu(); lockScroll() }}></button>
       <nav id="navbar">
         <Link href="/" className="nav-icon">HOME</Link>
         <Link href="/sobremim" className="nav-icon">SOBRE MIM</Link>
@@ -22,7 +39,7 @@ function Header() {
           id="switch"
           type="checkbox"
           name="theme"
-          onChange={switchTheme}
+          onClick={switchTheme}
         />
         <label htmlFor="switch" />
         <p>A</p>

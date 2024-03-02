@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-
 }
 
 #left-content {
@@ -16,9 +15,21 @@
 }
 
 #user-img {
-  width: 400px;
+  width: 40vh;
   display: flex;
   align-self: center;
   justify-self: center;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 880px) {
+  #user-img {
+    width: 30vh;
+  }
+
+  #left-content {
+    margin: 5vh 5vh;
+    font-size: 20px;
+    padding: 0;
+  }
 }
