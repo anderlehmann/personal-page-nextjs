@@ -1,13 +1,24 @@
 'use client'
 import "./Header.css";
 import Link from 'next/link'
+import { useEffect, useState } from "react";
 
 function Header() {
   document.body.style.overflow = "auto";
 
+  const [isLightTheme, setLightTheme] = useState(
+    localStorage.getItem("isLightTheme") === "true"
+  );
+
+  useEffect(() => {
+    localStorage.setItem("isLightTheme", isLightTheme);
+  }, [isLightTheme]);
+
   const switchTheme = () => {
     const html = document.querySelector("html");
     html.classList.toggle("light-mode");
+
+    setLightTheme((prevTheme) => !prevTheme);
   };
 
   const switchActiveMenu = () => {
@@ -39,7 +50,8 @@ function Header() {
           id="switch"
           type="checkbox"
           name="theme"
-          onClick={switchTheme}
+          onClick={() => { switchTheme() }}
+          checked={!isLightTheme}
         />
         <label htmlFor="switch" />
         <p>A</p>

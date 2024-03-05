@@ -12,7 +12,7 @@ export default function Home() {
           <h2>Anderson Lehmann</h2>
           <p id="content">Sou estudante de desenvolvimento web!</p>
         </div>
-        <img src="/images/image-profile.png" id="user-img" alt="imagem perfil"></img>
+        <img src="./images/image-profile.png" id="user-img" alt="imagem perfil"></img>
       </div>
     </main>
   );
