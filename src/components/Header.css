@@ -32,7 +32,7 @@ label::after {
 }
 
 input:checked+label {
-  background-image: url(/images/icon_moon.svg);
+  background-image: url(./images/icon_moon.svg);
   background-color: #262632;
   background-repeat: no-repeat;
   background-position: 25% 50%;
