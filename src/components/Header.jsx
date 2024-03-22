@@ -1,38 +1,44 @@
 'use client'
+
 import "./Header.css";
-import Link from 'next/link'
-import { useEffect, useState } from "react";
+import Link from 'next/link';
+import { useEffect, useState, useRef } from "react";
 
 function Header() {
-  document.body.style.overflow = "auto";
 
-  const [isLightTheme, setLightTheme] = useState(
-    localStorage.getItem("isLightTheme") === "true"
-  );
-
-  useEffect(() => {
-    localStorage.setItem("isLightTheme", isLightTheme);
-  }, [isLightTheme]);
+  const readTheme = () => {
+    if (typeof window !== "undefined") {
+      const html = document.querySelector("html");
+      if (html.classList.contains("light-mode")) {
+        console.log(html.classList.contains("light-mode"));
+        return
+      }
+    };
+  };
 
   const switchTheme = () => {
-    const html = document.querySelector("html");
-    html.classList.toggle("light-mode");
-
-    setLightTheme((prevTheme) => !prevTheme);
+    if (typeof window !== "undefined") {
+      const html = document.querySelector("html");
+      html.classList.toggle("light-mode");
+    }
   };
 
   const switchActiveMenu = () => {
-    const navBar = document.querySelector("#navbar");
-    navBar.classList.toggle("active");
+    if (typeof window !== "undefined") {
+      const navBar = document.querySelector("#navbar");
+      navBar.classList.toggle("active");
+    }
   };
 
   const lockScroll = () => {
-    const navBar = document.querySelector("#navbar");
-    if (navBar.classList.contains("active")) {
-      document.body.style.overflow = "hidden";
-      return
+    if (typeof window !== "undefined") {
+      const navBar = document.querySelector("#navbar");
+      if (navBar.classList.contains("active")) {
+        document.body.style.overflow = "hidden";
+        return
+      }
+      document.body.style.overflow = "auto";
     }
-    document.body.style.overflow = "auto";
   };
 
   return (
@@ -50,8 +56,8 @@ function Header() {
           id="switch"
           type="checkbox"
           name="theme"
-          onClick={() => { switchTheme() }}
-          checked={!isLightTheme}
+          onChange={() => { switchTheme() }}
+          checked={readTheme()}
         />
         <label htmlFor="switch" />
         <p>A</p>
