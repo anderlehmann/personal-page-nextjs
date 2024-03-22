@@ -1,3 +1,5 @@
+'use client';
+
 import "./conhecimentos.css"
 
 import IconsTechs from "@/components/IconsTechs";
