@@ -13,7 +13,7 @@ label {
   border-radius: 100px;
   position: relative;
   background-color: #f2e9e4;
-  background-image: url(./images/icon_sun.svg);
+  background-image: url(../../public./images/icon_sun.svg);
   background-repeat: no-repeat;
   background-position: 75% 50%;
   background-size: 14px;
