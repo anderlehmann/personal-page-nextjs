@@ -1,18 +1,27 @@
 'use client'
 
-import "./Header.css";
+import './Header.css';
 import Link from 'next/link';
-import { useEffect, useState, useRef } from "react";
+import Cookies from 'js-cookie';
+import { useEffect, useState, useRef } from 'react';
 
 function Header() {
+
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+  useEffect(() => {
+    lockScroll();
+    readTheme();
+  }, []);
 
   const readTheme = () => {
     if (typeof window !== "undefined") {
       const html = document.querySelector("html");
       if (html.classList.contains("light-mode")) {
-        console.log(html.classList.contains("light-mode"));
-        return
+        setIsDarkTheme(true);
+        return;
       }
+      setIsDarkTheme(false);
     };
   };
 
@@ -20,7 +29,9 @@ function Header() {
     if (typeof window !== "undefined") {
       const html = document.querySelector("html");
       html.classList.toggle("light-mode");
-    }
+
+      setIsDarkTheme(html.classList.contains("light-mode"));
+    };
   };
 
   const switchActiveMenu = () => {
@@ -57,7 +68,7 @@ function Header() {
           type="checkbox"
           name="theme"
           onChange={() => { switchTheme() }}
-          checked={readTheme()}
+          checked={isDarkTheme}
         />
         <label htmlFor="switch" />
         <p>A</p>
