@@ -10,7 +10,7 @@ export default function Contato() {
     <main className="App">
       <Header />
       <div className="body-page body-contato">
-        <img alt="user icon" width="120" height="120" src="/images/user-icon.png"></img>
+        <img alt="user icon" width="120" height="120" src="./images/user-icon.png"></img>
         <h2 id="h2-contato">Me encontre aqui!</h2>
         <Link className="wrapper-redes" href="https://github.com/anderlehmann" target="_blank">
           <Image alt="github" src="/images/github.png" width="35" height="35"></Image>
