@@ -46,4 +46,12 @@
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 20px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 880px) {
+  p {
+    font-size: 20px;
+    font-weight: 400;
+  }
 }

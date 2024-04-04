@@ -167,6 +167,20 @@ label:active:after {
     padding-top: 70px;
   }
 
+  #navbar.active~#nav-button {
+    border-top-color: transparent;
+  }
+
+  #navbar.active~#nav-button::before {
+    transform: rotate(135deg);
+    color: red;
+  }
+
+  #navbar.active~#nav-button::after {
+    transform: rotate(-135deg);
+    top: -9px;
+  }
+
   .nav-icon {
     margin-top: 30px;
   }

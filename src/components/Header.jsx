@@ -54,7 +54,6 @@ function Header() {
 
   return (
     <header id="header">
-      <button id="nav-button" onClick={() => { switchActiveMenu(); lockScroll() }}></button>
       <nav id="navbar">
         <Link href="/" className="nav-icon">HOME</Link>
         <Link href="/sobremim" className="nav-icon">SOBRE MIM</Link>
@@ -62,6 +61,7 @@ function Header() {
         <Link href="/projetos" className="nav-icon">PROJETOS</Link>
         <Link href="/contato" className="nav-icon">CONTATO</Link>
       </nav>
+      <button id="nav-button" onClick={() => { switchActiveMenu(); lockScroll() }}></button>
       <div id="icons-header">
         <input
           id="switch"
