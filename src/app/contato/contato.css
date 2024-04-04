@@ -1,0 +1,39 @@
+.body-contato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+#h2-contato {
+  margin-bottom: 60px;
+  margin-top: 15px;
+  font-size: 25px;
+}
+
+.wrapper-redes {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  border: solid 2px var(--color-font);
+  border-radius: 10px;
+  min-width: 300px;
+  min-height: 60px;
+  padding-left: 25px;
+  text-decoration: none;
+}
+
+.wrapper-redes:hover {
+  background-color: var(--background-color-bottom);
+}
+
+.wrapper-redes>p {
+  margin: 0px 15px;
+  color: var(--color-font);
+}
+
+@media screen and (max-width: 880px) {
+  #h2-contato {
+    font-size: 20px;
+  }
+}

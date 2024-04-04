@@ -173,12 +173,11 @@ label:active:after {
 
   #navbar.active~#nav-button::before {
     transform: rotate(135deg);
-    color: red;
   }
 
   #navbar.active~#nav-button::after {
     transform: rotate(-135deg);
-    top: -9px;
+    top: -9.5px;
   }
 
   .nav-icon {
