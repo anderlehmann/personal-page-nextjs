@@ -10,11 +10,11 @@ export default function Projetos() {
     <main className="App">
       <Header />
       <div className="body-page body-projetos">
-        <a href='/projetos/solado-store' className='projects'>
+        <Link href='/projetos/solado-store' className='projects'>
           <p id='over-message'>WIP...</p>
-          <img id='img-shoes-store' src="/images/project-shoes-store.jpg" alt="" />
+          <img id='img-shoes-store' src="./images/project-shoes-store.jpg" />
           <p>Shoes Store</p>
-        </a>
+        </Link>
       </div>
     </main>
   )
