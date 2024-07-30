@@ -1,0 +1,52 @@
+.body-projetos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  padding: 5% 10%;
+}
+
+.projects {
+  display: flex;
+  min-height: 190px;
+  width: 240px;
+  border: 2px solid var(--color-font);
+  border-radius: 15px;
+  overflow: clip;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  background-color: var(--background-menu);
+}
+
+#img-shoes-store {
+  width: 100%;
+  /* padding: 5px; */
+  /* border-radius: 10px; */
+}
+
+.projects>p {
+  padding-bottom: 18px;
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 200px;
+  font-weight: bold;
+  color: var(--color-font);
+}
+
+#over-message {
+  position: absolute;
+  color: var(--background-menu);
+  left: 0px;
+  background-color: var(--color-font);
+  border-radius: 0 0 15px 0;
+  height: 25px;
+  padding: 0 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-bottom: 2px solid var(--background-menu);
+  border-right: 2px solid var(--background-menu);
+}
