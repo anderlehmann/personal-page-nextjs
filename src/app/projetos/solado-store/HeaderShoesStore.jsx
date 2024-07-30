@@ -12,9 +12,9 @@ export function HeaderShoesStore() {
         <Image width={25} height={25} id="search-desktop" className='icons-header-store' src="./images/search-desktop.svg" alt="pesquisar" />
         <Image width={25} height={25} id="search-mobile" className='icons-header-store' src="./images/search-mobile.svg" alt="pesquisar" />
 
-        <Link href="/projetos/solado-store/usuario" className='icons-header-store'>
-          <Image width={25} height={25} src="./images/cart.svg" alt="carrinho" />
-        </Link>
+        {/* <Link href="/projetos/solado-store/usuario" className='icons-header-store'> */}
+        <Image width={25} height={25} src="./images/cart.svg" alt="carrinho" />
+        {/* </Link> */}
 
         <Link href="/projetos/solado-store/usuario" className='icons-header-store'>
           <Image width={25} height={25} src="./images/like.svg" alt="favoritos" />
