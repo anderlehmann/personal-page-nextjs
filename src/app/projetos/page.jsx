@@ -10,9 +10,9 @@ export default function Projetos() {
     <main className="App">
       <Header />
       <div className="body-page body-projetos">
-        <Link href='/projetos/solado-store' className='projects'>
+        <Link href='/projetos/solado-store' prefetch={false} className='projects'>
           <p id='over-message'>WIP...</p>
-          <img id='img-shoes-store' src="./images/project-shoes-store.jpg" />
+          <img id='img-shoes-store' src="https://res.cloudinary.com/dsgkcgx1s/image/upload/v1722449186/project-shoes-store_hi6ou4.jpg" />
           <p>Shoes Store</p>
         </Link>
       </div>
