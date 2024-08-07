@@ -6,7 +6,8 @@
   flex-basis: 0;
   flex-direction: column;
   align-items: center;
-  max-width: 130px;
+  max-width: 170x;
+  min-width: 145px;
   border-radius: 10px;
   background-color: #ffffff;
 }
@@ -33,12 +34,15 @@
 #model-price-box p {
   font-size: 16px;
   font-weight: 600;
+  /* border: 1px solid goldenrod; */
+  text-align: start;
 }
 
 
 @media screen and (min-width: 680px) {
   #box-icon-shoes {
     min-width: 200px;
+    max-width: 200px;
   }
 
   #model-price-box p {

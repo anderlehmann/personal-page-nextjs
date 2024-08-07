@@ -57,16 +57,22 @@
 }
 
 #icons-shoes-wrapper {
-  /* border: 1px solid red; */
   display: flex;
   flex-wrap: wrap;
   margin: 50px 0;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  /* border: 1px solid red; */
   padding: 10px 0;
   min-height: 200px;
   gap: 15px;
   width: 100%;
+  text-align: center;
+}
+
+.p-home-load-error {
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 
@@ -158,5 +164,6 @@
   #icons-shoes-wrapper {
     gap: 35px;
     max-width: 1200px;
+    /* display: grid; */
   }
 }
