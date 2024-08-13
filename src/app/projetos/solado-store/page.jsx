@@ -11,7 +11,8 @@ export default function HomeShoesStore() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:3090/shoes');
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+      const response = await fetch(apiUrl);
       const result = await response.json();
       setDataShoes(result);
       setIsLoading(false);
@@ -22,10 +23,11 @@ export default function HomeShoesStore() {
   };
 
   const dataMapped = () => {
-    if (dataShoes.length > 0) {
-      return dataShoes.map((shoe, index) => {
+    if (dataShoes.users.length > 0) {
+      return dataShoes.users.map((shoe, index) => {
         return <IconShoes
           key={index}
+          idUrl={shoe.id}
           src={shoe.image_url}
           brand={shoe.brand}
           model={shoe.model}
