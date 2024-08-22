@@ -64,15 +64,22 @@
   gap: 20px;
   width: 100%;
   text-align: center;
-  /* border: 1px solid tomato; */
+  /* border: 3px solid tomato; */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
   justify-items: center;
 }
 
 .p-home-load-error {
   font-size: 1.3rem;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 70%;
+  min-height: 180px;
+  /* border: 1px solid green; */
 }
 
 
@@ -166,8 +173,8 @@
     max-width: 1180px;
     /* border: 1px solid tomato; */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 40px 20px;
-    justify-content: center;
+    justify-items: center;
   }
 }
