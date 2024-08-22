@@ -1,7 +1,7 @@
 export function generateStaticParams() {
   const ids = ['1', '2', '3'];
   const result = ids.map(id => ({ id }));
-  console.log(result);
+  // console.log(result);
   return result;
 }
 

@@ -23,7 +23,7 @@ export default function HomeShoesStore() {
   };
 
   const dataMapped = () => {
-    if (dataShoes.users.length > 0) {
+    if (dataShoes.users?.length > 0) {
       return dataShoes.users.map((shoe, index) => {
         return <IconShoes
           key={index}
