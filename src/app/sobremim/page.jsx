@@ -8,7 +8,7 @@ export default function Sobre() {
     <main className="App">
       <Header />
       <div className="body-page body-sobremim">
-        <p>Sobre mim</p>
+        <p></p>
       </div>
     </main>
   )
